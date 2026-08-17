@@ -773,47 +773,65 @@ export default function HomePage({ navigate, pendingSection, onSectionScrolled }
       >
         <FadeSection>
           <h2
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: 'clamp(3rem, 9vw, 9rem)',
-              fontWeight: 400,
-              lineHeight: 0.9,
-              letterSpacing: '-0.03em',
-              color: '#111',
-              marginBottom: 'clamp(40px, 6vh, 60px)',
-            }}
-          >
-            Есть<br />проект?<br />Давайте<br />создадим<br />что-то<br />запоминающееся.
-          </h2>
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontSize: 'clamp(2.2rem, 6vw, 6rem)',
+    fontWeight: 400,
+    lineHeight: 0.9,
+    letterSpacing: '-0.03em',
+    color: '#111',
+    marginBottom: 'clamp(40px, 6vh, 60px)',
+  }}
+>
+  <span>Есть проект?</span>
+  <br />
+
+  <span style={{ display: 'inline-block', marginTop: '0.35em' }}>
+    Давайте
+  </span>
+  <br />
+
+  создадим что-то<br />
+  запоминающееся.
+</h2>
         </FadeSection>
 
         <FadeSection>
           <div className="contact-grid" style={{ alignItems: 'start' }}>
             <div>
               <a
-                href="mailto:kristinaskokova593@gmail.com"
-                className="arrow-btn"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  background: '#111',
-                  color: '#F6F4EF',
-                  padding: '16px 32px',
-                  textDecoration: 'none',
-                  fontFamily: "'Onest', sans-serif",
-                  fontSize: '0.7rem',
-                  fontWeight: 500,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  transition: 'background 0.2s, gap 0.2s',
-                  marginBottom: '2rem',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.background = '#333')}
-                onMouseLeave={e => (e.currentTarget.style.background = '#111')}
-              >
-                Обсудить проект <span>↗</span>
-              </a>
+                href="https://t.me/skokova_kris"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="arrow-btn"
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+    background: 'transparent',
+    color: '#111',
+    border: '1px solid #111',
+    padding: '16px 32px',
+    textDecoration: 'none',
+    fontFamily: "'Onest', sans-serif",
+    fontSize: '0.7rem',
+    fontWeight: 500,
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    transition: 'background 0.2s ease, color 0.2s ease',
+    marginBottom: '2rem',
+  }}
+  onMouseEnter={e => {
+    e.currentTarget.style.background = '#111'
+    e.currentTarget.style.color = '#F6F4EF'
+  }}
+  onMouseLeave={e => {
+    e.currentTarget.style.background = 'transparent'
+    e.currentTarget.style.color = '#111'
+  }}
+>
+  Обсудить проект <span>↗</span>
+</a>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

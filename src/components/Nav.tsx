@@ -103,11 +103,11 @@ export default function Nav({ page, navigate }: NavProps) {
               Контакты
             </button>
             <button
-              onClick={() => scrollTo('contact')}
+              onClick={() => window.open('https://t.me/skokova_kris', '_blank')}
               style={{
-                background: '#111111',
-                color: '#F6F4EF',
-                border: 'none',
+                background: 'transparent',
+color: '#111111',
+border: '1px solid #111111',
                 padding: '10px 20px',
                 fontFamily: "'Onest', system-ui, sans-serif",
                 fontSize: '0.65rem',
@@ -120,8 +120,14 @@ export default function Nav({ page, navigate }: NavProps) {
                 alignItems: 'center',
                 gap: '0.5rem',
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = '#333')}
-              onMouseLeave={e => (e.currentTarget.style.background = '#111111')}
+              onMouseEnter={e => {
+  e.currentTarget.style.background = '#111111'
+  e.currentTarget.style.color = '#F6F4EF'
+}}
+onMouseLeave={e => {
+  e.currentTarget.style.background = 'transparent'
+  e.currentTarget.style.color = '#111111'
+}}
             >
               Обсудить проект <span style={{ fontSize: '0.8em' }}>↗</span>
             </button>
