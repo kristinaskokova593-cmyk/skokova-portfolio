@@ -4,10 +4,8 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/TextLayer.css'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString()
+pdfjs.GlobalWorkerOptions.workerSrc =
+  `${import.meta.env.BASE_URL}pdf.worker.min.mjs`
 
 interface ArchiveItem {
   name: string
@@ -38,7 +36,6 @@ export default function Lightbox({
   // Горизонтальные PDF, которые нужно центрировать
   const isHorizontalPdf =
     item.name === 'Визитка' ||
-    item.name === 'QR POST' ||
     item.name === 'Подарочный сертификат'
 
   useEffect(() => {
