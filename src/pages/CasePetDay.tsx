@@ -17,16 +17,45 @@ export default function CasePetDay({ navigate }: CasePetDayProps) {
   return (
     <div style={{ background: bg, color: light, minHeight: '100vh' }}>
       {/* Back */}
-      <div style={{ padding: 'clamp(24px, 4vw, 48px) clamp(24px, 5vw, 80px)', maxWidth: 1440, margin: '0 auto' }}>
-        <button
-          onClick={() => navigate('home')}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', color: muted, fontFamily: "'Onest', sans-serif", fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '6px', padding: 0, transition: 'color 0.2s' }}
-          onMouseEnter={e => (e.currentTarget.style.color = light)}
-          onMouseLeave={e => (e.currentTarget.style.color = muted)}
-        >
-          ← Назад
-        </button>
-      </div>
+<div
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    zIndex: 50,
+    padding: 'clamp(24px, 4vw, 48px) clamp(24px, 5vw, 80px)',
+  }}
+>
+  <button
+    onClick={() => navigate('home')}
+    style={{
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      color: muted,
+      fontFamily: "'Onest', sans-serif",
+      fontSize: '0.65rem',
+      letterSpacing: '0.1em',
+      textTransform: 'uppercase',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '6px',
+      padding: 0,
+      transition: 'color 0.2s',
+    }}
+    onMouseEnter={e => (e.currentTarget.style.color = light)}
+    onMouseLeave={e => (e.currentTarget.style.color = muted)}
+  >
+    ← Назад
+  </button>
+</div>
+
+{/* Space reserved for fixed Back button */}
+<div
+  style={{
+    height: '100px',
+  }}
+/>
 
       {/* Hero visual */}
       <section style={{ maxWidth: 1440, margin: '0 auto', padding: '0 clamp(24px, 5vw, 80px) clamp(48px, 8vh, 80px)' }}>

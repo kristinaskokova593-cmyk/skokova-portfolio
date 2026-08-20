@@ -3,12 +3,13 @@ import type { Page, NavigateFn } from '../App'
 import Lightbox from '../components/Lightbox'
 import noireImg from '../imports/Noire.png'
 import savorImg from '../imports/______________________.png'
+
 const businessCardPdf = '/Визитка.pdf'
-import certPdf from "../imports/Сертификат для фотографа.pdf?url";
-import qrPdf from "../imports/Qr для студии маникюра.pdf?url";
-import fitnessPdf from "../imports/Таплинк фитнес-тренеру.pdf?url";
-import weddingPdf from "../imports/Пригласительное на свадьбу Снежанна.pdf?url";
-import priceListPdf from "../imports/Гайд для фотографа.pdf?url";
+const certPdf = '/Сертификат для фотографа.pdf'
+const qrPdf = '/Qr для студии маникюра.pdf'
+const fitnessPdf = '/Таплинк фитнес-тренеру.pdf'
+const weddingPdf = '/Пригласительное на свадьбу Снежанна.pdf'
+const priceListPdf = '/Гайд для фотографа.pdf'
 
 interface HomePageProps {
   navigate: NavigateFn
@@ -22,39 +23,231 @@ const archiveItems = [
     category: 'Графический дизайн',
     pdfUrl: businessCardPdf,
     preview: (
-      <div style={{ display: 'flex', width: '100%', height: '100%' }}>
-        <div style={{ flex: 1, background: '#0A0A0A', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '20px', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 30%, #2a2a2a 0%, #0a0a0a 70%)' }} />
-          <p style={{ position: 'relative', fontFamily: "'Playfair Display', serif", fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', fontSize: 'clamp(0.7rem, 2vw, 1rem)', lineHeight: 1.2 }}>
+      <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          background: 'transparent',
+        }}
+      >
+        <div
+          style={{
+            flex: 1,
+            background: '#0A0A0A',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            padding: '20px',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background:
+                'radial-gradient(ellipse at 50% 30%, #2a2a2a 0%, #0a0a0a 70%)',
+            }}
+          />
+
+          <p
+            style={{
+              position: 'relative',
+              fontFamily: "'Playfair Display', serif",
+              fontStyle: 'italic',
+              color: 'rgba(255,255,255,0.9)',
+              fontSize: 'clamp(0.7rem, 2vw, 1rem)',
+              lineHeight: 1.2,
+            }}
+          >
             efedorova.pro
           </p>
         </div>
-        <div style={{ flex: 1, background: '#F9F8F6', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '20px', gap: '0.5rem' }}>
-          <p style={{ fontFamily: "'Onest', sans-serif", fontWeight: 600, fontSize: 'clamp(0.6rem, 1.5vw, 0.85rem)', color: '#111', lineHeight: 1.3 }}>Екатерина Фёдорова</p>
-          <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.5rem, 1.2vw, 0.65rem)', letterSpacing: '0.08em', color: '#888', textTransform: 'uppercase' }}>женский фотограф</p>
-          <div style={{ marginTop: '0.5rem', borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: '0.5rem' }}>
-            <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.5rem, 1.1vw, 0.65rem)', color: '#555', marginBottom: '0.2rem' }}>+7 900 128 76 29</p>
-            <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.5rem, 1.1vw, 0.65rem)', color: '#555' }}>efedorova.pro</p>
+
+        <div
+          style={{
+            flex: 1,
+            background: 'transparent',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            padding: '20px',
+            gap: '0.5rem',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "'Onest', sans-serif",
+              fontWeight: 600,
+              fontSize: 'clamp(0.6rem, 1.5vw, 0.85rem)',
+              color: '#111',
+              lineHeight: 1.3,
+            }}
+          >
+            Екатерина Фёдорова
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Onest', sans-serif",
+              fontSize: 'clamp(0.5rem, 1.2vw, 0.65rem)',
+              letterSpacing: '0.08em',
+              color: '#888',
+              textTransform: 'uppercase',
+            }}
+          >
+            женский фотограф
+          </p>
+
+          <div
+            style={{
+              marginTop: '0.5rem',
+              borderTop: '1px solid rgba(0,0,0,0.1)',
+              paddingTop: '0.5rem',
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "'Onest', sans-serif",
+                fontSize: 'clamp(0.5rem, 1.1vw, 0.65rem)',
+                color: '#555',
+                marginBottom: '0.2rem',
+              }}
+            >
+              +7 900 128 76 29
+            </p>
+
+            <p
+              style={{
+                fontFamily: "'Onest', sans-serif",
+                fontSize: 'clamp(0.5rem, 1.1vw, 0.65rem)',
+                color: '#555',
+              }}
+            >
+              efedorova.pro
+            </p>
           </div>
-          <p style={{ marginTop: '0.5rem', fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(0.45rem, 1vw, 0.6rem)', color: '#888' }}>Стиль. Эстетика. Минимализм.</p>
+
+          <p
+            style={{
+              marginTop: '0.5rem',
+              fontFamily: "'Playfair Display', serif",
+              fontStyle: 'italic',
+              fontSize: 'clamp(0.45rem, 1vw, 0.6rem)',
+              color: '#888',
+            }}
+          >
+            Стиль. Эстетика. Минимализм.
+          </p>
         </div>
       </div>
     ),
   },
+
   {
     name: 'Подарочный сертификат',
     category: 'Графический дизайн',
     pdfUrl: certPdf,
     preview: (
-      <div style={{ width: '100%', height: '100%', background: '#E4E0D8', display: 'flex', flexDirection: 'column', padding: '18px', position: 'relative', overflow: 'hidden' }}>
-        <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.5rem, 1.3vw, 0.7rem)', letterSpacing: '0.06em', color: '#333', lineHeight: 1.4, marginBottom: '0.5rem' }}>ПОДАРОЧНЫЙ СЕРТИФИКАТ<br />НА ФОТОСЕССИЮ</p>
-        <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', color: '#8B1A1A', fontSize: 'clamp(0.6rem, 1.6vw, 0.9rem)', lineHeight: 1.3, marginBottom: 'auto' }}>Фотограф<br />Алёна Скокова</p>
-        <div style={{ position: 'absolute', right: 0, top: 0, width: '40%', height: '100%', background: 'linear-gradient(160deg, #3a3a3a 0%, #1a1a1a 100%)', overflow: 'hidden' }}>
-          <div style={{ width: '100%', height: '100%', background: 'radial-gradient(ellipse at 50% 35%, #666 0%, #1a1a1a 70%)', opacity: 0.8 }} />
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          background: 'transparent',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '18px',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "'Onest', sans-serif",
+            fontSize: 'clamp(0.5rem, 1.3vw, 0.7rem)',
+            letterSpacing: '0.06em',
+            color: '#333',
+            lineHeight: 1.4,
+            marginBottom: '0.5rem',
+          }}
+        >
+          ПОДАРОЧНЫЙ СЕРТИФИКАТ
+          <br />
+          НА ФОТОСЕССИЮ
+        </p>
+
+        <p
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontStyle: 'italic',
+            color: '#8B1A1A',
+            fontSize: 'clamp(0.6rem, 1.6vw, 0.9rem)',
+            lineHeight: 1.3,
+            marginBottom: 'auto',
+          }}
+        >
+          Фотограф
+          <br />
+          Алёна Скокова
+        </p>
+
+        <div
+          style={{
+            position: 'absolute',
+            right: 0,
+            top: 0,
+            width: '40%',
+            height: '100%',
+            background:
+              'linear-gradient(160deg, #3a3a3a 0%, #1a1a1a 100%)',
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              background:
+                'radial-gradient(ellipse at 50% 35%, #666 0%, #1a1a1a 70%)',
+              opacity: 0.8,
+            }}
+          />
         </div>
-        <div style={{ marginTop: '1rem' }}>
-          <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.45rem, 1vw, 0.6rem)', color: '#555' }}>для: <span style={{ color: '#8B1A1A', fontStyle: 'italic' }}>Светланы</span></p>
-          <p style={{ fontFamily: "'Onest', sans-serif", fontSize: 'clamp(0.45rem, 1vw, 0.6rem)', color: '#555' }}>дата: 26.07.2026 · срок: 1 год</p>
+
+        <div
+          style={{
+            marginTop: '1rem',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "'Onest', sans-serif",
+              fontSize: 'clamp(0.45rem, 1vw, 0.6rem)',
+              color: '#555',
+            }}
+          >
+            для:{' '}
+            <span
+              style={{
+                color: '#8B1A1A',
+                fontStyle: 'italic',
+              }}
+            >
+              Светланы
+            </span>
+          </p>
+
+          <p
+            style={{
+              fontFamily: "'Onest', sans-serif",
+              fontSize: 'clamp(0.45rem, 1vw, 0.6rem)',
+              color: '#555',
+            }}
+          >
+            дата: 26.07.2026 · срок: 1 год
+          </p>
         </div>
       </div>
     ),
@@ -89,7 +282,7 @@ const archiveItems = [
     ),
   },
   {
-    name: 'Fitness Coach Promo',
+    name: 'Тапплинк фитнес-тренера',
     category: 'Графический дизайн',
     pdfUrl: fitnessPdf,
     preview: (
@@ -139,7 +332,7 @@ const archiveItems = [
     ),
   },
   {
-    name: 'Прайс-лист фотосессий',
+    name: 'Гайд для фотосессий',
     category: 'Графический дизайн',
     pdfUrl: priceListPdf,
     preview: (
@@ -830,7 +1023,7 @@ export default function HomePage({ navigate, pendingSection, onSectionScrolled }
     e.currentTarget.style.color = '#111'
   }}
 >
-  Обсудить проект <span>↗</span>
+  Обсудить проект <span style={{ fontSize: '1rem', lineHeight: 1 }}>↗︎</span>
 </a>
             </div>
 
