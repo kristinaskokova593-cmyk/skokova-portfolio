@@ -4,12 +4,12 @@ import Lightbox from '../components/Lightbox'
 import noireImg from '../imports/Noire.png'
 import savorImg from '../imports/______________________.png'
 
-const businessCardPdf = '/Визитка.pdf'
-const certPdf = '/Сертификат для фотографа.pdf'
-const qrPdf = '/Qr для студии маникюра.pdf'
-const fitnessPdf = '/Таплинк фитнес-тренеру.pdf'
-const weddingPdf = '/Пригласительное на свадьбу Снежанна.pdf'
-const priceListPdf = '/Гайд для фотографа.pdf'
+const businessCardPdf = '/business-card.pdf'
+const certPdf = '/photographer-certificate.pdf'
+const qrPdf = '/qr-manicure.pdf'
+const fitnessPdf = '/fitness-taplink.pdf'
+const weddingPdf = '/wedding-invitation.pdf'
+const priceListPdf = '/photographer-guide.pdf'
 
 interface HomePageProps {
   navigate: NavigateFn
